@@ -901,6 +901,7 @@ static void printUsage(ostream& out) {
 	    << "  --fr/--rf/--ff     -1, -2 mates align fw/rev, rev/fw, fw/fw (--fr)" << endl
 		<< "  --no-mixed         suppress unpaired alignments for paired reads" << endl
 		<< "  --no-discordant    suppress discordant alignments for paired reads" << endl
+		<< "  --dovetail         concordant when mates extend past each other" << endl
 		<< endl
 	    << " Output:" << endl;
 	//if(wrapper == "basic-0") {
@@ -1375,10 +1376,10 @@ static void parseOption(int next_option, const char *arg) {
 		case ARG_SSE8_NO: enable8 = false; break;
 		case ARG_UNGAPPED: doUngapped = true; break;
 		case ARG_UNGAPPED_NO: doUngapped = false; break;
-		case ARG_NO_DOVETAIL: gDovetailMatesOK = false; break;
+		// case ARG_NO_DOVETAIL: gDovetailMatesOK = false; break;
 		// case ARG_NO_CONTAIN:  gContainMatesOK  = false; break;
 		// case ARG_NO_OVERLAP:  gOlapMatesOK     = false; break;
-		case ARG_DOVETAIL:    gDovetailMatesOK = true;  break;
+		// case ARG_DOVETAIL:    gDovetailMatesOK = true;  break;
 		// case ARG_CONTAIN:     gContainMatesOK  = true;  break;
 		// case ARG_OVERLAP:     gOlapMatesOK     = true;  break;
 		case ARG_QC_FILTER: qcFilter = true; break;
