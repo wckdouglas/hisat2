@@ -1379,7 +1379,7 @@ static void parseOption(int next_option, const char *arg) {
 		// case ARG_NO_DOVETAIL: gDovetailMatesOK = false; break;
 		// case ARG_NO_CONTAIN:  gContainMatesOK  = false; break;
 		// case ARG_NO_OVERLAP:  gOlapMatesOK     = false; break;
-		// case ARG_DOVETAIL:    gDovetailMatesOK = true;  break;
+		case ARG_DOVETAIL:    gDovetailMatesOK = true;  break;
 		// case ARG_CONTAIN:     gContainMatesOK  = true;  break;
 		// case ARG_OVERLAP:     gOlapMatesOK     = true;  break;
 		case ARG_QC_FILTER: qcFilter = true; break;
