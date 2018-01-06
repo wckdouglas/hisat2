@@ -334,7 +334,7 @@ static void resetOptions() {
 	gMate1fw				= true;  // -1 mate aligns in fw orientation on fw strand
 	gMate2fw				= false; // -2 mate aligns in rc orientation on fw strand
 	gFlippedMatesOK         = false; // allow mates to be in wrong order
-	gDovetailMatesOK        = false; // allow one mate to extend off the end of the other
+	gDovetailMatesOK        = true; // allow one mate to extend off the end of the other
 	gContainMatesOK         = true;  // allow one mate to contain the other in PE alignment
 	gOlapMatesOK            = true;  // allow mates to overlap in PE alignment
 	gExpandToFrag           = true;  // incr max frag length to =larger mate len if necessary
