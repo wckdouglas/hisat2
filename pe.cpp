@@ -127,8 +127,8 @@ int PairedEndPolicy::peClassifyPair(
 	}
 	// Check whether there's dovetailing; i.e. does the left mate
 	// extend past the right end of the right mate, or vice versa
-	if(( oneLeft && (hi1 > hi2 || lo2 < lo1)) ||
-	   (!oneLeft && (hi2 > hi1 || lo1 < lo2)))
+	if( (fw1 && (hi1 > hi2 || lo2 < lo1)) ||
+	  (!fw1 && (hi2 > hi1 || lo1 < lo2)) )
 	{
 		if(!dovetailOk_) return PE_ALS_DISCORD;
 		type = PE_ALS_DOVETAIL;
